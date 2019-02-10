@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>답변항목 생성/수정 페이지</h1>
+	{% if error %}
+		<p style="color:red;">{{error}}</p>
+	{% endif %}
+	<form action="" method="post">
+		{% csrf_token %}
+		<table>
+			{{i}}
+		</table>
+		<input type="submit" value="갱신">
+	</form>
+	<a href="{% url 'vote:index' %}">메인페이지로 돌아가기</a>
+</body>
+</html>
